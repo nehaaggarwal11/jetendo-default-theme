@@ -3,7 +3,7 @@
 <cffunction name="init" access="public" returntype="string" localmode="modern">
 	<cfscript>
 	application.zcore.functions.zIncludeZOSFORMS();
-	application.zcore.skin.includeCSS("/zthemes/default/stylesheets/style.css");
+	application.zcore.skin.includeCSS("/zthemes/jetendo-default-theme/stylesheets/style.css");
 	request.disablesharethis=true;
 	</cfscript>
 </cffunction>
