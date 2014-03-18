@@ -19,6 +19,14 @@
 	// local.output=request.zos.functions.zGetImageCSSCode("#request.zos.globals.homedir#images/shell/", "/images/shell/");
 	// writeoutput('<textarea name="test" cols="100" rows="10">'&local.output&'</textarea>');
 	// request.zos.functions.zabort();
+
+	// regex to extra inline styles for external stylesheets
+	// replace: .*?(class="(sh-[0-9]*)" style="([^"]*)")
+	// with: .\2{\3}\n
+
+	// then remove the style="" with this one:
+	// (class="sh-[0-9]*") style="[^"]*"
+	// \1
 	</cfscript>
 <!DOCTYPE html>
 	<!--[if lt IE 7]>	  <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -88,6 +96,9 @@
 		</cfif>
 		<a id="contenttop"></a>
 		#tagStruct.topcontent ?: ""#
+		<cfif request.zos.template.getTagContent('pagenav') NEQ ''>
+		  <p>#tagStruct.pagenav ?: ""#</p>
+		</cfif>
 		<cfif request.zos.template.getTagContent('pagetitle') NEQ ''>
 		  <h1>#tagStruct.pagetitle ?: ""#</h1>
 		</cfif>
@@ -108,7 +119,9 @@
 		</a>
 	  </cfif>
 	  - all rights reserved.
-	  | <a href="/z/misc/site-map/index">Site Map</a></div>
+	  | <a href="/z/misc/site-map/index">Site Map</a> | 
+	  <a href="/z/user/terms-of-use/index">Terms Of Use</a> | 
+	  <a href="/z/user/privacy/index">Privacy Policy</a></div>
   </div>
 </div>
 #tagStruct.scripts ?: ""#
