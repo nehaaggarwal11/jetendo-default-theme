@@ -4,7 +4,7 @@
     <cfscript>
 	var ts=structnew();
 	ts.content_unique_name="/";
-	request.zos.tempObj.contentInstance.configCom.includePageContentByName(ts);
+	application.zcore.app.getAppCFC("content").includePageContentByName(ts);
 	</cfscript>
 </cffunction>
 </cfoutput>

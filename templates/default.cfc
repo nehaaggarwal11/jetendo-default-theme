@@ -5,6 +5,14 @@
 	application.zcore.functions.zIncludeZOSFORMS();
 	application.zcore.skin.includeCSS("/zthemes/jetendo-default-theme/stylesheets/style.css");
 	request.disablesharethis=true;
+	request.slideshowHTML="";
+	if(form[request.zos.urlRoutingParameter] EQ "/"){
+		savecontent variable="request.slideshowHTML"{
+			ts=structnew();ts.slideshow_codename="Slideshow";request.zos.functions.zSlideShow(ts);
+			echo('<br style="clear:both;" />');
+			ts=structnew();ts.slideshow_codename="Listing Slideshow";request.zos.functions.zSlideShow(ts);
+		}
+	}
 	</cfscript>
 </cffunction>
 
@@ -23,6 +31,8 @@
 	// regex to extra inline styles for external stylesheets
 	// replace: .*?(class="(sh-[0-9]*)" style="([^"]*)")
 	// with: .\2{\3}\n
+
+	// remove other stuff between classes: ^([^\.^\n].*)$
 
 	// then remove the style="" with this one:
 	// (class="sh-[0-9]*") style="[^"]*"
@@ -85,15 +95,7 @@
 	</div>
 	<div id="center_block">
 	  <div class="cont_block">
-		<cfif form[request.zos.urlRoutingParameter] EQ "/">
-			<cfscript>
-			ts=structnew();ts.slideshow_codename="Slideshow";request.zos.functions.zSlideShow(ts);
-			</cfscript>
-			<br style="clear:both;" />
-			<cfscript>
-			ts=structnew();ts.slideshow_codename="Listing Slideshow";request.zos.functions.zSlideShow(ts);
-			</cfscript>
-		</cfif>
+		#request.slideshowHTML#
 		<a id="contenttop"></a>
 		#tagStruct.topcontent ?: ""#
 		<cfif request.zos.template.getTagContent('pagenav') NEQ ''>
