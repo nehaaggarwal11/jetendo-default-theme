@@ -28,11 +28,11 @@
 	// writeoutput('<textarea name="test" cols="100" rows="10">'&local.output&'</textarea>');
 	// request.zos.functions.zabort();
 
-	// regex to extra inline styles for external stylesheets
+	// regex to extract inline styles for external stylesheets
 	// replace: .*?(class="(sh-[0-9]*)" style="([^"]*)")
 	// with: .\2{\3}\n
 
-	// remove other stuff between classes: ^([^\.^\n].*)$
+	// remove other stuff between classes: ^[^\.\n][^\n]*$
 
 	// then remove the style="" with this one:
 	// (class="sh-[0-9]*") style="[^"]*"
