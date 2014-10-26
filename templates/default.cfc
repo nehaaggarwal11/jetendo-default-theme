@@ -4,15 +4,7 @@
 	<cfscript>
 	application.zcore.functions.zIncludeZOSFORMS();
 	application.zcore.skin.includeCSS("/zthemes/jetendo-default-theme/stylesheets/style.css");
-	request.disablesharethis=true;
-	request.slideshowHTML="";
-	if(form[request.zos.urlRoutingParameter] EQ "/"){
-		savecontent variable="request.slideshowHTML"{
-			ts=structnew();ts.slideshow_codename="Slideshow";request.zos.functions.zSlideShow(ts);
-			echo('<br style="clear:both;" />');
-			ts=structnew();ts.slideshow_codename="Listing Slideshow";request.zos.functions.zSlideShow(ts);
-		}
-	}
+	request.disablesharethis=true; 
 	</cfscript>
 </cffunction>
 
@@ -51,80 +43,75 @@
 </head>
 
 <body>
-<div id="wrapper">
-  <div id="cont_area">
-	<div style="background-color:##990000; color:##FFF; font-size:18px; line-height:24px; width:934px; padding:20px;">#request.zos.globals.sitename#</div>
-	<div style="width:974px; float:left;">
-	  <cfscript>
+<div class="wrapper">
+	<div class="cont_area">
+	<div class="titlediv">#request.zos.globals.sitename#
+		<div class="searchdiv">
+
+			<input type="text" name="searchtext" value="Type Keyword Here" onclick="if(this.value == 'Type Keyword Here'){this.value='';}" onblur="if(this.value==''){this.value='Type Keyword Here';}" size="15" />
+			<input type="submit" name="searchsubmit" value="Search" />
+		</div>
+	</div>
+	<div class="menudiv">
+		<cfscript>
 	ts=structnew();
 	ts.menu_name="Main Menu";
 	rs=request.zos.functions.zMenuInclude(ts);
 	writeoutput(rs.output);
 	</cfscript>
 	</div>
-	<div id="left_block">
-	  <cfif isdefined('request.zos.tempObj.rentalInstance') EQ false or request.zos.tempObj.rentalInstance.configCom.isRentalPage() EQ false>
-		<div class="sidebartext">
-		  <cfif structkeyexists(request.zos,'listingCom')>
-			<h2>LISTING SEARCH</h2>
-			<cfscript>
-			ts=structnew();
-			ts.output=true;
-			ts.searchFormLabelOnInput=true;
-			ts.searchFormEnabledDropDownMenus=true;
-			ts.searchFormHideCriteria=structnew();
-			ts.searchFormHideCriteria["more_options"]=true;
-			request.zos.listingCom.includeSearchForm(ts);
-			</cfscript>
-		  </cfif>
+	<div class="center_block">
+		<div class="cont_block"> 
+			<a id="contenttop"></a>
+			#tagStruct.topcontent ?: ""#
+			<cfif request.zos.template.getTagContent('pagenav') NEQ ''>
+				<p>#tagStruct.pagenav ?: ""#</p>
+			</cfif>
+			<cfif request.zos.template.getTagContent('pagetitle') NEQ ''>
+				<h1>#tagStruct.pagetitle ?: ""#</h1>
+			</cfif>
+			#tagStruct.content ?: ""#
+			<cfif structkeyexists(request.zos, 'listingCom')>
+				<hr />
+				#request.zos.listingCom.getDisclaimerText()#
+			</cfif>
 		</div>
-	  </cfif>
-	  <div class="sidebartext">
-		<h2>SITE SEARCH</h2>
-		<form action="/z/misc/search-site/results" method="get" class="search_form" id="sideQuestionForm">
-		  <input type="text" name="searchtext" value="Type Keyword Here" onclick="if(this.value == 'Type Keyword Here'){this.value='';}" onblur="if(this.value==''){this.value='Type Keyword Here';}" size="15" />
-		  <input type="submit" name="searchsubmit" value="Search" />
-		</form>
-	  </div>
-	  <div class="sidebartext" style="padding:0px;">
-		#tagStruct.menu ?: ""#
-		<cfif structkeyexists(request.zos.tempObj,'blogInstance')>
-#request.zos.tempObj.blogInstance.configCom.menuTemplate()#
-		</cfif>
-	  </div>
-	</div>
-	<div id="center_block">
-	  <div class="cont_block">
-		#request.slideshowHTML#
-		<a id="contenttop"></a>
-		#tagStruct.topcontent ?: ""#
-		<cfif request.zos.template.getTagContent('pagenav') NEQ ''>
-		  <p>#tagStruct.pagenav ?: ""#</p>
-		</cfif>
-		<cfif request.zos.template.getTagContent('pagetitle') NEQ ''>
-		  <h1>#tagStruct.pagetitle ?: ""#</h1>
-		</cfif>
-		#tagStruct.content ?: ""#
-		<cfif structkeyexists(request.zos, 'listingCom')>
-		  <hr />
-			#request.zos.listingCom.getDisclaimerText()#
-		</cfif>
-	  </div>
+		<div class="left_block">
+			<cfif isdefined('request.zos.tempObj.rentalInstance') EQ false or request.zos.tempObj.rentalInstance.configCom.isRentalPage() EQ false>
+				<div class="sidebartext">
+					<cfif structkeyexists(request.zos,'listingCom')>
+						<h2>LISTING SEARCH</h2>
+						<cfscript>
+						ts=structnew();
+						ts.output=true;
+						ts.searchFormLabelOnInput=true;
+						ts.searchFormEnabledDropDownMenus=true;
+						ts.searchFormHideCriteria=structnew();
+						ts.searchFormHideCriteria["more_options"]=true;
+						request.zos.listingCom.includeSearchForm(ts);
+						</cfscript>
+					</cfif>
+				</div>
+			</cfif>
+			<div class="sidebartext"> 
+				Sidebar
+			</div> 
+		</div>
 	</div>
 	<div class="crights">
-	  &copy;#year(now())#
-	  <cfif form[request.zos.urlRoutingParameter] NEQ "/">
+		&copy;#year(now())#
+		<cfif form[request.zos.urlRoutingParameter] NEQ "/">
 		<a href="/">
-	  </cfif>
+		</cfif>
 #request.zos.globals.shortdomain#
-	  <cfif form[request.zos.urlRoutingParameter] NEQ "/">
+		<cfif form[request.zos.urlRoutingParameter] NEQ "/">
 		</a>
-	  </cfif>
-	  - all rights reserved.
-	  | <a href="/z/misc/site-map/index">Site Map</a> | 
-	  <a href="/z/user/terms-of-use/index">Terms Of Use</a> | 
-	  <a href="/z/user/privacy/index">Privacy Policy</a></div>
-  </div>
+		</cfif>
+		- all rights reserved.
+		| <a href="/z/misc/site-map/index">Site Map</a> | 
+		<a href="/z/user/terms-of-use/index">Terms Of Use</a> | 
+		<a href="/z/user/privacy/index">Privacy Policy</a></div>
+	</div>
 </div>
 #tagStruct.scripts ?: ""#
 #request.zos.functions.zvarso('Visitor Tracking Code')#
