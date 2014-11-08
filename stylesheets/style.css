@@ -18,8 +18,21 @@ a:hover{ color:#CC0000;}
 .titlediv{background-color:#000; color:#FFF; float:left; font-size:18px; line-height:24px; width:94%; padding:3%;}
 .menudiv{width:100%; float:left;}
 .searchdiv{float:right; width:200px;}
+
+.mobileMenuDiv .zMenuBarDiv {width:100% !important; border-top:1px solid #999;}
+.mobileMenuButton {display:none;}
+.mobileMenuDiv {display:block;}
+
 @media only screen and (max-width: 980px) { 
 	.wrapper{width:100%; } 
+	.zMenuBarDiv { width:100% !important;}
+	.mobileMenuDiv .zMenuBarDiv li { float:left; clear:both; width:100% !important;}
+	.mobileMenuButton, .mobileMenuDiv .zMenuBarDiv a.trigger{ display:block; width:90% !important; padding:5% !important; padding-top:7px !important; padding-bottom:7px !important; float:left !important; clear:both !important; margin:0px !important;}
+	.mobileMenuButton{ background-color:#4D4D4D; color:#FFF !important; padding-top:10px !important; padding-bottom:10px !important;}
+	.mobileMenuDiv .zMenuBarDiv li ul { display:none !important;} 
+
+	.mobileMenuButton {display:block;}
+	.mobileMenuDiv {display:none;}
 }
 @media only screen and (max-width: 660px) { 
 	.left_block{clear:both; display:block;max-width:94%;width:94%; border-right:none;}

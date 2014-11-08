@@ -53,12 +53,15 @@
 		</div>
 	</div>
 	<div class="menudiv">
-		<cfscript>
-	ts=structnew();
-	ts.menu_name="Main Menu";
-	rs=request.zos.functions.zMenuInclude(ts);
-	writeoutput(rs.output);
-	</cfscript>
+		<a href="##" class="mobileMenuButton">Menu</a>
+		<div class="mobileMenuDiv">
+			<cfscript>
+			ts=structnew();
+			ts.menu_name="Main Menu";
+			rs=request.zos.functions.zMenuInclude(ts);
+			writeoutput(rs.output);
+			</cfscript>
+		</div>
 	</div>
 	<div class="center_block">
 		<div class="cont_block"> 
@@ -113,6 +116,15 @@
 		<a href="/z/user/privacy/index">Privacy Policy</a></div>
 	</div>
 </div>
+<script type="text/javascript">
+zArrDeferredFunctions.push(function() { 
+	$(".mobileMenuButton").bind("click", function(){
+		$(".mobileMenuDiv").slideToggle("fast");
+		return false;
+	});
+	 
+});
+</script>
 #tagStruct.scripts ?: ""#
 #request.zos.functions.zvarso('Visitor Tracking Code')#
 </body>
