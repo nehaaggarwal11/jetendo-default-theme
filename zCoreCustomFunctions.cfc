@@ -9,7 +9,8 @@
 	ts.arrIgnoreURLs=arraynew(1);
 	arrayappend(ts.arrIgnoreURLs,"/");
 	//ts.arrIgnoreURLContains=arraynew(1);
-	request.zos.functions.zEnableContentTransition(ts);
+	//request.zos.functions.zEnableContentTransition(ts);
+	application.zcore.functions.zFullScreenMobileApp(true);
 	</cfscript>	
 </cffunction>
 
