@@ -47,9 +47,10 @@
 	<div class="cont_area">
 	<div class="titlediv">#request.zos.globals.sitename#
 		<div class="searchdiv">
-
+			<form action="/z/misc/search-site/search" method="get">
 			<input type="text" name="searchtext" value="Type Keyword Here" onclick="if(this.value == 'Type Keyword Here'){this.value='';}" onblur="if(this.value==''){this.value='Type Keyword Here';}" size="15" />
 			<input type="submit" name="searchsubmit" value="Search" />
+			</form>
 		</div>
 	</div>
 	<div class="menudiv">
