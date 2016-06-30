@@ -4,4 +4,9 @@ body {
 	background-color : #FFFFFF;
 	margin:0px;
 	color:#000000;
+	font-size:16px; line-height:1.3;
 }
+h1,h2,h3,h4,h5,ul,ol,p{ margin:0px; padding:0px; padding-bottom:10px; }
+
+ul,ol{ margin:0px; padding:0px; padding-left:25px !important; }
+ul li{ list-style:disc !important; }
