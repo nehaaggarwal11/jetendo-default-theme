@@ -75,7 +75,7 @@
 				<h1>#tagStruct.pagetitle ?: ""#</h1>
 			</cfif>
 			#tagStruct.content ?: ""#
-			<cfif structkeyexists(request.zos, 'listingCom')>
+			<cfif application.zcore.app.siteHasApp("listing")>
 				<hr />
 				#request.zos.listingCom.getDisclaimerText()#
 			</cfif>
@@ -83,7 +83,7 @@
 		<div class="left_block">
 			<cfif isdefined('request.zos.tempObj.rentalInstance') EQ false or request.zos.tempObj.rentalInstance.configCom.isRentalPage() EQ false>
 				<div class="sidebartext">
-					<cfif structkeyexists(request.zos,'listingCom')>
+					<cfif application.zcore.app.siteHasApp("listing")>
 						<h2>LISTING SEARCH</h2>
 						<cfscript>
 						ts=structnew();
