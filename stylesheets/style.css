@@ -13,8 +13,8 @@ a:hover{ color:#CC0000;}
 *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing:border-box;}
 
 .cont_area{width:100%; display:table;}
-.left_block{width:29%;display:table-cell; max-width:250px; float:left;padding:3%;background-color:#EFEFEF; border-right:1px solid #CCC; }  
-.cont_block{width:70%;display:table-cell;float:right;padding:3%;} 
+.left_block{width:20%;display:table-cell;  float:left;padding:1%;background-color:#EFEFEF; border-right:1px solid #CCC; }  
+.cont_block{width:79%;display:table-cell;float:right;padding:1%;} 
 .crights{ clear:both; width:100%; padding:3%; float:left; font-size:10px; line-height:14px;  font-size:10px; line-height:14px; border-top:1px solid #999;} 
 .titlediv{background-color:#000; color:#FFF; float:left; font-size:18px; line-height:24px; width:100%; padding:3%;}
 .menudiv{width:100%; float:left;}
@@ -23,8 +23,13 @@ a:hover{ color:#CC0000;}
 .mobileMenuDiv .zMenuBarDiv {width:100% !important; border-top:1px solid #999;}
 .mobileMenuButton {display:none;}
 .mobileMenuDiv {display:block;}
+@media only screen and (max-width: 1362px) { 
+.left_block{width:29%; }  
+.cont_block{width:70%; } 
 
-@media only screen and (max-width: 980px) { 
+}
+
+@media only screen and (max-width: 992px) { 
 	.wrapper{width:100%; } 
 	.zMenuBarDiv { width:100% !important;}
 	.mobileMenuDiv .zMenuBarDiv li { float:left; clear:both; width:100% !important;}
@@ -35,7 +40,7 @@ a:hover{ color:#CC0000;}
 	.mobileMenuButton {display:block;}
 	.mobileMenuDiv {display:none;}
 }
-@media only screen and (max-width: 660px) { 
+@media only screen and (max-width: 767px) { 
 	.left_block{clear:both; display:block;max-width:100%;width:100%; border-right:none;}
 	.cont_block{width:100%;display:block;}
 	.cont_area{display:block;}
