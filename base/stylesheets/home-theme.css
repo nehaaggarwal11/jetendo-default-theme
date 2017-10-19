@@ -1,0 +1,307 @@
+section.jdt-homepage-slideshow .jdt-home-slider-container {
+	margin: 0 auto;
+}
+section.jdt-homepage-slideshow .jdt-home-slider .jdt-home-slide {
+	padding: 0;
+}
+
+section.jdt-homepage-slideshow .jdt-homepage-slider.jdt-content-slider {
+	margin-bottom: 0;
+}
+
+section.jdt-homepage-slideshow.jdt-pager-left-inset .jdt-content-slider .jdt-slider-pager {
+	left: 0;
+	bottom: 10px;
+	line-height: 0;
+	text-align: left;
+	padding-left: 10px;
+}
+section.jdt-homepage-slideshow.jdt-pager-left-inset .jdt-content-slider .jdt-slider-pager span {
+	margin: 0 4px 0 0;
+}
+section.jdt-homepage-slideshow.jdt-pager-center-inset .jdt-content-slider .jdt-slider-pager {
+	bottom: 10px;
+	line-height: 0;
+}
+section.jdt-homepage-slideshow.jdt-pager-right-inset .jdt-content-slider .jdt-slider-pager {
+	right: 0;
+	bottom: 10px;
+	left: auto;
+	line-height: 0;
+	text-align: right;
+	padding-right: 10px;
+}
+section.jdt-homepage-slideshow.jdt-pager-right-inset .jdt-content-slider .jdt-slider-pager span {
+	margin: 0 0 0 4px;
+}
+
+
+
+
+.jdt-homepage-cta-content {
+	width:100%; float:left; text-align:center;
+}
+.jdt-homepage-cta-content .jdt-homepage-cta img{ width:100%; float:left;}
+
+.jdt-homepage-cta-content .jdt-homepage-cta {
+	width: 324px;
+
+	display:inline-block;
+	text-align:left;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom:20px;
+}
+
+.jdt-homepage-cta-content .jdt-homepage-cta:first-child {
+	padding-left: 0px;
+	padding-right: 10px;
+	width: 314px;
+}
+.jdt-homepage-cta-content .jdt-homepage-cta:last-child {
+	padding-left: 10px;
+	padding-right: 0px;
+	width: 313px;
+}
+.jdt-fluid .jdt-homepage-cta-content .jdt-homepage-cta {
+	width:424px;
+}
+.jdt-fluid .jdt-homepage-cta-content .jdt-homepage-cta:first-child {
+	width:414px;
+}
+.jdt-fluid .jdt-homepage-cta-content .jdt-homepage-cta:last-child {
+	width:414px;
+}
+
+
+
+
+.jdt-homepage-main {
+	float: left;
+	width: 100%;
+	background-color: #F5F5F5;
+}
+
+.jdt-homepage-content {
+	background-color: #FFFFFF;
+	margin: 0;
+	display:table-cell;
+	vertical-align:top;
+	width: 60%;
+	max-width: 100%;
+	padding:20px;
+}
+.jdt-homepage-content.jdt-full {
+	width: 100%;
+	max-width: 100%;
+}
+
+.jdt-homepage-blog {
+	border-top: 2px solid #F5F5F5;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.jdt-homepage-blog.jdt-cta-above {
+	border-top: none;
+}
+
+.jdt-homepage-sidebar {
+	background-color: #F5F5F5;
+	margin: 0;
+	vertical-align:top;
+	display:table-cell;
+	width: 40%;
+	max-width: 100%;
+}
+.jdt-homepage-sidebar-box {
+	float: left;
+	clear: both;
+	width: 100%;
+	padding: 40px 20px;
+}
+
+
+.jdt-lead-form {
+	border-bottom: 1px solid #CCCCCC;
+}
+.jdt-lead-form p {
+	display: none;
+}
+.jdt-lead-form .table-list {
+	width: 100%;
+}
+.jdt-lead-form .table-list th {
+	width: 100%;
+	display: block;
+	color: #666666;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 10px 0 0 5px;
+}
+.jdt-lead-form .table-list th .zHelpToolTipLabel {
+	padding-bottom: 0;
+}
+.jdt-lead-form .table-list td {
+	width: 100%;
+	display: block;
+}
+.jdt-lead-form .table-list input, .jdt-lead-form .table-list select, .jdt-lead-form .table-list textarea {
+	max-width: none;
+	width: 100% !important;
+}
+.jdt-lead-form .table-list input[type="checkbox"] {
+	width: auto !important;
+}
+.jdt-lead-form .table-list input[type="text"],
+.jdt-lead-form .table-list input[type="email"],
+.jdt-lead-form .table-list textarea { 
+	background: #FFFFFF;
+	color: #333333;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 5px 10px;
+}
+.jdt-lead-form .table-list tr:last-child th {
+	display: none;
+}
+.jdt-lead-form .table-list tr:last-child td {
+	text-align: center;
+}
+.jdt-lead-form .table-list button[type="submit"] {
+	padding: 10px 40px;
+	font-weight: 400;
+	font-size: 18px; 
+}
+.jdt-lead-form .zPrivacyPolicyLink {
+	display: none;
+}
+
+
+
+.jdt-company-info .jdt-company-info-address i.fa {
+	font-size: 2em;
+	padding: 0.25em;
+	width: 1.75em;
+	float: left;
+}
+.jdt-company-info .jdt-company-info-phone i.fa {
+	font-size: 2em;
+	padding: 0 0.25em;
+	width: 1.75em;
+	float: left;
+}
+
+
+
+.jdt-homepage-sidebar-map {
+	float: left;
+	width: 100%;
+	max-width: 100%;
+}
+.jdt-homepage-sidebar-map iframe {
+	float: left;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+
+
+
+
+
+
+.jdt-blog-thumbnail-container{ margin-bottom:20px; }
+.jdt-blog-thumbnail-image{ float:left; width:35%; padding-right:20px;}
+.jdt-blog-thumbnail-text{ float:left; width:65%;}
+
+@media screen and ( max-width: 1362px ) {
+	.jdt-fluid .jdt-homepage-cta-content .jdt-homepage-cta {
+		width: 328px;
+	}
+
+	.jdt-fluid .jdt-homepage-cta-content .jdt-homepage-cta:first-child {
+		width: 318px;
+	}
+	.jdt-fluid .jdt-homepage-cta-content .jdt-homepage-cta:last-child {
+		width: 318px;
+	}
+}
+
+
+@media screen and ( max-width: 992px ) {
+
+
+
+	.jdt-homepage-content, .jdt-homepage-sidebar {
+		display:block;
+		float:left;
+	}
+	section.jdt-homepage-slideshow.jdt-pager-left-inset .jdt-content-slider .jdt-slider-pager,
+	section.jdt-homepage-slideshow.jdt-pager-right-inset .jdt-content-slider .jdt-slider-pager {
+		left: 0;
+		right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
+
+	.jdt-homepage-cta-content {
+		padding: 0;
+	} 
+
+	.jdt-homepage-main {
+		margin: 0;
+		width: 100%;
+	}
+
+	.jdt-homepage-content {
+		margin: 0;
+	}
+	.jdt-homepage-sidebar {
+		margin: 0;
+	}
+	.jdt-homepage-sidebar-box {
+		padding: 40px;
+	}
+	.jdt-homepage-sidebar-map iframe {
+		height: 320px;
+	}
+	.jdt-homepage-cta-content .jdt-homepage-cta {
+		width:32% !important;
+		padding-left:10px !important;
+		padding-right:10px !important;
+	}
+	.jdt-blog-thumbnail-image{ max-width:220px;}
+}
+
+@media screen and ( max-width: 767px ) {
+	.jdt-homepage-sidebar-map iframe {
+		height: 480px;
+	}
+	.jdt-homepage-cta-content .jdt-homepage-cta {
+		padding-left:10px !important;
+		padding-right:10px !important;
+		width:320px !important;
+	} 
+}
+
+@media screen and ( max-width: 479px ) {
+	.jdt-home-slider-container {
+		margin: 0;
+	}
+	.jdt-home-slider .jdt-slider-previous-button {
+		display: none;
+	}
+	.jdt-home-slider .jdt-slider-next-button {
+		display: none;
+	}
+
+	.jdt-homepage-cta-content .jdt-homepage-cta {
+		padding-left:0px !important;
+		padding-right:0px !important;
+		max-width:100%; 
+		width:320px !important;
+	}
+	.jdt-blog-thumbnail-image{ max-width:100%; width:100% !important; padding-bottom:20px;}
+	.jdt-blog-thumbnail-text{ width:100% !important;}
+}

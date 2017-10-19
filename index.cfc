@@ -1,11 +1,10 @@
 <cfcomponent>
 <cfoutput>
-<cffunction name="index" access="remote" localmode="modern">
-    <cfscript>
-	var ts=structnew();
-	ts.content_unique_name="/";
-	application.zcore.app.getAppCFC("content").includePageContentByName(ts);
+<cffunction name="index" localmode="modern" access="remote">
+	<cfscript>
 	</cfscript>
+	You must save Home Page and Theme Config in manager first and then delete this file (/index.cfc)
+	<cfabort>
 </cffunction>
 </cfoutput>
 </cfcomponent>

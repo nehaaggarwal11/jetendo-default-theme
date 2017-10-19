@@ -1,0 +1,92 @@
+header .header-v2 { 
+	position: relative;
+}
+header .header-v2 .top-bar {
+	width: 98%;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: right;
+}
+header .header-v2 .top-bar .address {
+	display: inline-block;
+}
+header .header-v2 .top-bar .city-state {
+	display: inline-block;
+}
+header .header-v2 .top-bar .social-icons {
+	display: inline-block;
+}
+header .header-v2 .top-bar .social-icons a {
+	display: inline-block;
+}
+header .header-v2 .top-bar .social-icons img {
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+}
+
+header .header-v2 .main-menu-container {
+	position: relative; 
+	height: 60px;
+}
+header .header-v2 .main-menu-container .logo {
+	position: absolute;
+	top: 50%;
+	left: 1%;
+	z-index: 500;
+	transform: translateY(-50%);
+}
+header .header-v2 .main-menu-container .main-menu {
+	position: absolute;
+	bottom: 0;
+	z-index: 400;
+}
+
+/* You will need to put this in custom.css to change left padding based on logo width */
+header .header-v2 .main-menu-container .main-menu .mobileMenuDiv {
+	padding-left: 300px;
+}
+
+
+@media screen and (max-width: 992px) {
+	header .header-v2 {
+		height: auto;
+	}
+	header .header-v2 .top-bar {
+		text-align: center;
+		padding: 5px 0 5px;
+	}
+	header .header-v2 .main-menu-container {
+		position: relative;
+		margin-top: 0;
+		height: auto;
+	}
+	header .header-v2 .main-menu-container .logo {
+		position: static;
+		top: auto;
+		left: auto;
+		transform: none;
+		float: left;
+		width: 100%;
+	}
+	header .header-v2 .main-menu-container .main-menu {
+		position: static;
+		bottom: auto;
+		z-index: 400;
+	}
+	header .header-v2 .main-menu-container .main-menu .mobileMenuDiv {
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 479px) {
+
+}

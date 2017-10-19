@@ -1,0 +1,560 @@
+@import url( '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i' );
+@import url( '//fonts.googleapis.com/css?family=Montserrat:200,400,400i,600,600i' );
+
+
+*,:after,:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing:border-box;
+}
+a {
+	-webkit-transition: background 0.3s ease, color 0.3s ease;
+	-moz-transition: background 0.3s ease, color 0.3s ease;
+	-ms-transition: background 0.3s ease, color 0.3s ease;
+	-o-transition: background 0.3s ease, color 0.3s ease;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+iframe { vertical-align: bottom; width: 100%; max-width: 100%; }
+img { vertical-align: bottom; }
+
+body {
+	background-color: #333333;
+	font-family: 'Open Sans', 'Arial', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height:1.5;
+	color: #666666;
+}
+
+
+
+hr {
+	border-bottom-color: #CCCCCC;
+}
+
+
+.fa {
+	display: inline-block;
+	text-align: center;
+	width: 1em;
+}
+
+
+.z-button {
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.z-button.jdt-large {
+	padding: 10px 40px;
+	letter-spacing: 1px;
+}
+.z-button.jdt-transparent {
+	text-transform: none;
+}
+
+
+
+
+
+
+.jdt-header-right {
+	text-align: right;
+}
+
+
+.jdt-call-phone {
+	display: inline-block;
+	background-color: #222222;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+.jdt-call-phone .jdt-call-phone-heading {
+	color: #FFFFFF !important;
+}
+.jdt-call-phone .jdt-call-phone-phone-number {
+	color: #339966;
+	letter-spacing: 0;
+}
+
+
+
+.jdt-zMenuBarDiv {
+	max-width: 100%;
+	width: 100% !important;
+}
+
+/**
+ * INTERNAL RESETS
+ */
+#zMenuDiv1,
+#zMenuDiv2,
+#zMenuDiv1 a.trigger-selected,
+#zMenuDiv2 a.trigger-selected {
+	background: none !important;
+}
+#zMenuDiv1 a.trigger,
+#zMenuDiv2 a.trigger {
+	display: inline-block;
+	border-left: none !important;
+	color: #FFFFFF;
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	font-size: 18px !important;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 20px !important;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#zMenuDiv1 li:hover a {
+	background-color: rgba( 0, 0, 0, 0.2 ) !important;
+}
+#zMenuDiv2 {
+	width: 100% !important;
+}
+#zMenuDiv2 li:hover a {
+	color: #FFFFFF;
+	background-color: rgba( 255, 255, 255, 0.2 ) !important;
+}
+
+
+header .jdt-main-menu .jdt-mobileMenuButton {
+	display: none;
+	color: #FFFFFF !important;
+	text-decoration: none;
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 20px;
+}
+header .jdt-main-menu #zMenuDiv1 a.trigger {
+	color: #FFFFFF !important;
+}
+
+
+
+.jdt-newsletter-container {
+	position: relative;
+}
+.jdt-newsletter-container:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-top-color: #FFFFFF;
+	border-top-width: 20px;
+	border-bottom: none;
+	margin-left: -30px;
+}
+.jdt-newsletter {
+	font-family: 'Montserrat', 'Arial', sans-serif;
+
+}
+.jdt-newsletter .jdt-sign-up {
+	padding: 10px 40px;
+	letter-spacing: 1px;
+}
+
+.jdt-footer-copyright a:link, .jdt-footer-copyright a:visited{
+	color:#666; text-decoration:none;
+}
+
+header .jdt-header-v2 { 
+	padding-bottom:20px;
+}
+
+footer .jdt-footer-menu #zMenuDiv2 {
+	background-color: #222222;
+}
+footer .jdt-footer-menu #zMenuDiv2 a.trigger-selected {
+	color: #FFFFFF !important;
+}
+footer .jdt-footer-copyright {
+	color: #666666;
+	padding:30px;
+}
+footer .jdt-footer-copyright a {
+	color: #999999;
+	text-decoration: underline;
+}
+
+
+
+h1 {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #333333;
+}
+
+
+
+
+
+
+.jdt-heading-large{ font-size:36px;}
+
+
+
+
+
+
+
+
+
+/**
+ * BLOG
+ */
+.rss-summary-thumbnail {}
+.rss-summary-thumbnail span {
+	display: inline-block;
+	overflow: hidden;
+}
+.rss-summary-thumbnail img {
+	max-width: 100%;
+	width: 100%;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease
+}
+.rss-summary-thumbnail span:hover img {
+	-webkit-transform: scale(1.25);
+	-moz-transform: scale(1.25);
+	-ms-transform: scale(1.25);
+	-o-transform: scale(1.25);
+	transform: scale(1.25)
+}
+.rss-summary-title {
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #339966;
+	text-decoration: none;
+	font-size: 2em;
+}
+.rss-summary-title:hover {
+	color: #333333;
+}
+.rss-summary-text {
+	font-size: 1em;
+}
+.rss-summary-readmore {
+	display: table;
+	margin-top: 20px;
+	background-color: #333333;
+	color: #FFFFFF;
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 10px 40px;
+}
+.rss-summary-readmore:hover {
+	color: #FFFFFF;
+	background-color: #339966;
+}
+
+.jdt-homepage-content{ padding:30px;}
+.jdt-homepage-blog{ padding-top:20px;}
+
+.jdt-homepage-content.jdt-full .jdt-homepage-sidebar-box{ padding:0px; padding-top:30px; padding-bottom:30px;}
+
+/**
+ * SUBPAGES
+ */  
+
+.jdt-sidebar-navigation {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.jdt-sidebar-navigation li {
+	border-bottom: 1px solid #CCCCCC;
+}
+.jdt-sidebar-navigation li:last-child {
+	border-bottom: none;
+}
+.jdt-sidebar-navigation li a {
+	position: relative;
+	left: 0;
+	display: block;
+	padding: 10px;
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.jdt-sidebar-navigation li.jdt-active a {
+	font-weight: 700;
+	color: #333333;
+}
+.jdt-sidebar-navigation li a:hover {
+	color: #333333;
+	left: 10px;
+}
+.jdt-sidebar-navigation li.jdt-active a:hover {
+	left: 0;
+}
+
+
+/**
+ * SUBPAGE DIV
+ */
+.zcontent-subpage-div h2 {
+	font-weight: 400;
+}
+.zcontent-subpage-div h2 a {
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	text-decoration: none;
+	color:#369;
+}
+
+
+
+
+
+
+
+
+.jdt-subpage-company-info {
+	position: relative;
+	background-color: #F5F5F5;
+}
+.jdt-subpage-company-info i.fa {
+	font-size: 2em;
+	padding: 0.25em;
+	width: 1.75em;
+	float: left;
+}
+.jdt-subpage-company-info .jdt-company-info-name div {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.jdt-subpage-company-info .jdt-company-info-phone div {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+
+
+
+
+/**
+ * CONTACT FORM
+ */
+.zinquiry-form-table {
+	width: 480px;
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: #F5F5F5;
+	padding: 20px;
+}
+.zinquiry-form-table th {
+	display: block;
+	width: 100%;
+	color: #666666;
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 18px;
+	padding: 10px 0 0 5px;
+}
+.zinquiry-form-table td {
+	display: block;
+	width: 100%;
+}
+.zinquiry-form-table input, .zinquiry-form-table select, .zinquiry-form-table textarea {
+	max-width: none;
+	width: 100% !important;
+}
+.zinquiry-form-table input[type="checkbox"] {
+	width: auto !important;
+}
+.zinquiry-form-table input[type="text"],
+.zinquiry-form-table input[type="email"],
+.zinquiry-form-table textarea {
+	border: 1px solid #CCCCCC;
+	background: #FFFFFF;
+	color: #333333;
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 18px;
+	padding: 5px 10px;
+}
+.znewslettercheckbox th {
+	display: none;
+}
+.zinquiry-form-table tr:last-child th {
+
+}
+.zinquiry-form-table tr:last-child td {
+	text-align: center;
+}
+.zinquiry-form-table button[type="submit"] {
+	padding: 10px 40px;
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+@media screen and ( max-width: 992px ) {
+	.z-container {
+		width: 100%;
+		margin: 0;
+	}
+
+
+	header .jdt-logo {
+		width: 50%;
+		margin: 0;
+		text-align: center;
+		padding: 10px 0;
+	}
+	header .jdt-header-right {
+		width: 50%;
+		margin: 0;
+		text-align: center;
+		padding: 20px 0;
+	}
+	header .jdt-header-right .jdt-call-phone .jdt-call-phone-heading {
+		font-size: 14px;
+	}
+	header .jdt-header-right .jdt-call-phone .jdt-call-phone-phone-number {
+		font-size: 18px;
+	}
+
+	header .jdt-main-menu .jdt-mobileMenuButton {
+		display: block;
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+	header .jdt-main-menu .jdt-mobileMenuDiv {
+		display: none;
+	}
+	header .jdt-main-menu .jdt-mobileMenuDiv .zMenuBarDiv li {
+		width: 100% !important;
+	}
+
+	#zMenuDiv1 a.trigger {
+		font-size: 16px !important;
+		line-height: 20px !important;
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+	}
+
+
+	.jdt-newsletter-container:before {
+		display: none;
+	}
+
+	.jdt-subpage-main {
+		width: 100%;
+		margin: 0;
+	}
+
+
+	.jdt-subpage-company-info {
+		text-align: center;
+	}
+	.jdt-subpage-company-info .jdt-company-info-name {
+		width: 100%;
+		padding: 20px 0;
+	}
+	.jdt-subpage-company-info .jdt-company-info-name div {
+		position: static;
+		top: auto;
+		transform: none;
+		text-align: center;
+	}
+
+	.jdt-subpage-company-info .jdt-company-info-address,
+	.jdt-subpage-company-info .jdt-company-info-phone {
+		float: left;
+		width: auto;
+		margin: 0;
+		min-width: 0;
+		max-width: none;
+		padding: 0;
+		text-align: center;
+		display: inline-block;
+	}
+	.jdt-subpage-company-info .jdt-company-info-phone {
+		padding: 0;
+	}
+	.jdt-subpage-company-info .jdt-company-info-phone div {
+		position: static;
+		top: auto;
+		transform: none;
+		text-align: center;
+	}
+
+	.jdt-subpage-company-info i.fa {
+		font-size: 2em;
+		padding: 0.25em;
+		width: 1.75em;
+		float: left;
+	}
+	h1{font-size:24px;}
+	.jdt-heading-large{ font-size:24px;}
+}
+
+@media screen and ( max-width: 767px ) {
+	header .jdt-logo {
+		width: 50%;
+		margin: 0;
+		text-align: center;
+		padding: 10px 0 0;
+	}
+	header .jdt-header-right {
+		width: 50%;
+		margin: 0;
+		text-align: center;
+		padding: 0 0 10px;
+	}
+	header .jdt-header-right .jdt-call-phone .jdt-call-phone-heading {
+		font-size: 14px;
+	}
+	header .jdt-header-right .jdt-call-phone .jdt-call-phone-phone-number {
+		font-size: 18px;
+	}
+
+	footer .jdt-footer-menu li {
+		display: block !important;
+		width: 100% !important;
+		min-width: 0 !important;
+		text-align: center;
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+}
+
+@media screen and ( max-width: 479px ) {
+
+}
